@@ -1,12 +1,12 @@
 class Cat {
-	constructor(name, id){
+	constructor(name, numClicks = 0, imageSrc, id){
 		this.name = name;
-		this.numClicks = 0;
 		this.id = id;
-		this.imageSrc = 'assets/cat';
+		this.numClicks = 0;
 	}
 
 	addImage(){
+		this.imageSrc = 'assets/cat/cat' + this.id + '.png';
 		console.log(this.imageSrc);
 	}
 	
@@ -24,10 +24,13 @@ function createCats(){
 	cat1 = new Cat;
 	cat1.name = "Moggie";
 	cat1.id = 1;
+	cat1.addImage();
 
 	cat2 = new Cat;
 	cat2.name = "Paws";
 	cat2.id = 2;
+	cat2.addImage();
+
 }
 createCats();
 
