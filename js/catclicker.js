@@ -23,29 +23,27 @@ class Cat {
 	}
 }
 
-let cat1, cat2; 
-    // initiate cats
+let cat1, cat2;
+function createCats(catContainer){
+	cat1 = new Cat;
+	cat1.name = "Moggie";
+	cat1.id = 1;
+	cat1.addImage(catContainer);
+
+	cat2 = new Cat;
+	cat2.name = "Paws";
+	cat2.id = 2;
+	cat2.addImage(catContainer);
+}
 
 window.addEventListener('load',function(){
 
-	function createCats(){
-		cat1 = new Cat;
-		cat1.name = "Moggie";
-		cat1.id = 1;
-		cat1.addImage(container);
-
-		cat2 = new Cat;
-		cat2.name = "Paws";
-		cat2.id = 2;
-		cat2.addImage(container);
-	}
+	
 
 	// use dom elements
     const container = document.querySelector('.container');
-    
-	
-	createCats();
-	
+    	
+	createCats(container);
 
 })
 
