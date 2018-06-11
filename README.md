@@ -2,6 +2,8 @@
 
 A very simple js app to practise functions and count clicks. Have fun annoying some cat.
 
+You can click cats [here](https://judithbeadle.github.io/Cat-clicker-2/) or you can clone or download the files and open up index.html in your favourite browser.
+
 ## Acknowledgements and Sources
 
 This is a project for the [Udacity Front-End Web Developer Nanodegree program](https://eu.udacity.com/course/front-end-web-developer-nanodegree--nd001).
