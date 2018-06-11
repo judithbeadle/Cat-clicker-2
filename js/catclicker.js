@@ -5,11 +5,14 @@ class Cat {
 		this.numClicks = 0;
 	}
 
-	addImage(){
-		this.imageSrc = 'assets/cat/cat' + this.id + '.png';
-		console.log(this.imageSrc);
-		imageHolder.classList.add('image' + this.id);
-		container.appendChild(imageHolder);
+	addImage(catContainer){
+		this.imageSrc = 'assets/cat' + this.id + '.png';
+		this.imageHolder = document.createElement('div');
+    	this.imageHolder.classList.add('image-holder', 'image' + this.id);
+    	this.image = document.createElement('img');
+    	this.image.src = this.imageSrc;
+    	this.imageHolder.appendChild(this.image);
+  		catContainer.appendChild(this.imageHolder);
 	}
 	
 	countClicks(){
@@ -22,28 +25,27 @@ class Cat {
 
 let cat1, cat2; 
     // initiate cats
-function createCats(){
-	cat1 = new Cat;
-	cat1.name = "Moggie";
-	cat1.id = 1;
-	cat1.addImage();
-
-	cat2 = new Cat;
-	cat2.name = "Paws";
-	cat2.id = 2;
-	cat2.addImage();
-
-}
 
 window.addEventListener('load',function(){
 
+	function createCats(){
+		cat1 = new Cat;
+		cat1.name = "Moggie";
+		cat1.id = 1;
+		cat1.addImage(container);
+
+		cat2 = new Cat;
+		cat2.name = "Paws";
+		cat2.id = 2;
+		cat2.addImage(container);
+	}
+
 	// use dom elements
     const container = document.querySelector('.container');
-    const imageHolder = document.createElement('div');
-    imageHolder.classList.add('image-holder');
-    container.appendChild(imageHolder);
-
+    
+	
 	createCats();
+	
 
 })
 
