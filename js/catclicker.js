@@ -8,6 +8,8 @@ class Cat {
 	addImage(){
 		this.imageSrc = 'assets/cat/cat' + this.id + '.png';
 		console.log(this.imageSrc);
+		imageHolder.classList.add('image' + this.id);
+		container.appendChild(imageHolder);
 	}
 	
 	countClicks(){
@@ -32,6 +34,17 @@ function createCats(){
 	cat2.addImage();
 
 }
-createCats();
+
+window.addEventListener('load',function(){
+
+	// use dom elements
+    const container = document.querySelector('.container');
+    const imageHolder = document.createElement('div');
+    imageHolder.classList.add('image-holder');
+    container.appendChild(imageHolder);
+
+	createCats();
+
+})
 
 
