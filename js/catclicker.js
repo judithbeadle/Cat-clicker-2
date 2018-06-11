@@ -16,7 +16,7 @@ class Cat {
     	this.scorePanel.innerHTML = this.scorePanelText; 
     	this.imageHolder.appendChild(this.image);
   		catContainer.appendChild(this.imageHolder);
-  		catContainer.appendChild(this.scorePanel);
+  		this.imageHolder.appendChild(this.scorePanel);
 	}
 	
 	countClicks(name, numClicks, scorePanel){
