@@ -7,8 +7,7 @@ class Cat {
 		this.imageHolder.classList.add('image-holder', 'image' + this.id);
 	}
 
-	addImage(catContainer){
-		
+	addCatHTML(catContainer){	
 		this.imageSrc = 'assets/cat' + this.id + '.png';
     	this.image = document.createElement('img');
     	this.image.src = this.imageSrc;
@@ -17,7 +16,6 @@ class Cat {
   		console.log(this.imageHolder);
 	}
 	
-
 	countClicks(name, numClicks){
 		numClicks = this.numClicks;
 		name = this.name;
@@ -26,35 +24,27 @@ class Cat {
 			updateCounter(name, numClicks);
 		}, false);
 	}
-
-	
-	
-	
 }
 
 let cat1, cat2;
 function createCats(catContainer, imageHolder){
 	cat1 = new Cat("Moggie", 1);
-	cat1.addImage(catContainer);
+	cat1.addCatHTML(catContainer);
 	cat1.countClicks(name, this.numClicks);
 	cat2 = new Cat("Paws", 2);
-	cat2.addImage(catContainer);
+	cat2.addCatHTML(catContainer);
 	cat2.countClicks(this.imageHolder);
 }
 function updateCounter(name, numClicks){
 	console.log(name + numClicks);
 }
 
-
-
 window.addEventListener('load',function(){
 
 
 	// use dom elements
     const container = document.querySelector('.container');
-	createCats(container);
-	
-	
+	createCats(container);	
 
 })
 
