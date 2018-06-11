@@ -1,0 +1,15 @@
+body {
+	font-family: Roboto, sans-serif;
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container p{
+	font-size: 1.25em;
+}
